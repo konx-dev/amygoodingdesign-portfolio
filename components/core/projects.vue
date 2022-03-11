@@ -5,9 +5,11 @@
         </div>
         <div class="py-16 bg-brand-navy">
             <div class="mx-auto container flex flex-col justify-center items-center">
-                <div class="text-brand-white mb-4 text-center">Some of my projects are hidden, if you have a passphrase enter it below</div>
+                <div class="text-brand-white mb-4 text-center">
+                    Some of my projects are hidden, if you have a passphrase enter it below
+                </div>
                 <div>
-                    <input v-model.lazy="enteredPassphrase" @change="checkPassphrase(enteredPassphrase)" class="py-2 px-10" />
+                    <input v-model.lazy="enteredPassphrase" type="text" class="py-2 px-10" @change="checkPassphrase(enteredPassphrase)">
                 </div>
             </div>
         </div> 
@@ -22,7 +24,8 @@ export default {
     },
     props: {
         content: {
-            required: true
+            required: true,
+            type: Array
         }
     },
     data() {
@@ -33,12 +36,15 @@ export default {
     },
     computed: {
         filteredContent() {
-            return this.content
+            if (this.projectsUnlocked) {
+                return this.content
+            } else {
+                return this.content.filter(item => item.private === false)
+            }
         }
     },
     methods: {
         checkPassphrase(val) {
-
             if (val === process.env.PASSWORD) {
                 alert('passphrase correct, projects unlocked')
                 this.projectsUnlocked = true

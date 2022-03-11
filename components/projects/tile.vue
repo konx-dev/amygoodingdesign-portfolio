@@ -1,16 +1,17 @@
 <template>
-<router-go to="/" class="project__tile overflow-hidden w-full flex justify-center items-center h-full mb-8 md:mx-4 xl:mb-12 xl:mx-8">
-    <div class="tile__title p-10 w-full h-full flex flex-col items-center justify-center text-center relative z-10 font-body uppercase text-brand-white">
-        <span>{{ content.title }}</span>
-        <span class="text-xl mt-8">{{ content.private }}</span>
-    </div>
-</router-go>
+    <router-go to="/" class="project__tile overflow-hidden w-full flex justify-center items-center h-full mb-8 md:mx-4 xl:mb-12 xl:mx-8">
+        <div class="tile__title p-10 w-full h-full flex flex-col items-center justify-center text-center relative z-10 font-body uppercase text-brand-white">
+            <span>{{ content.title }}</span>
+            <span class="text-xl mt-8">{{ content.private }}</span>
+        </div>
+    </router-go>
 </template>
 <script>
 export default {
     props: {
         content: {
-            required: true
+            required: true,
+            type: Object
         }
     }
 }
