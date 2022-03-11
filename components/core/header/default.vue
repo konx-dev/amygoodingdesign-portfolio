@@ -1,5 +1,5 @@
 <template>
-    <nav class="absolute top-0 right-0 w-full">
+    <nav class="absolute top-0 z-10 right-0 w-full">
         <div class="container mx-auto flex flex-col md:flex-row items-center md:justify-between p-5">
             <div class="navigation__logo relative mb-4 md:mb-0">
                 LOGO
