@@ -72,7 +72,7 @@ export default {
                 @include min-bp($lg) {
                     font-size: 100px;
                     transform: translateY(100%);
-                    transition: transform 1s;
+                    transition: transform 0.5s;
                 }
             }
         }
