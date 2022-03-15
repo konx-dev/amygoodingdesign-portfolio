@@ -7,7 +7,6 @@
             <span class="lg:hidden">{{ entry.hero[0].backgroundText }}</span>
         </div>
         <Projects :content="entry.projects" />
-        
     </div>
 </template>
 
