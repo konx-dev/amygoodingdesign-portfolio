@@ -6,7 +6,10 @@
             <span class="lg:hidden">{{ entry.hero[0].backgroundText }}</span>
             <span class="lg:hidden">{{ entry.hero[0].backgroundText }}</span>
         </div>
-        <Projects :content="entry.projects" />
+        <!-- <Projects :content="entry.projects" /> -->
+        <div class="bg-brand-navy py-16">
+            <ProjectsGallery :content="entry.projectsGallery" />
+        </div>
     </div>
 </template>
 
@@ -14,12 +17,14 @@
 import HomeEntry from '~/apollo/content/singles/home'
 
 import Hero from '~/components/core/hero.vue'
-import Projects from '~/components/core/projects.vue'
+import ProjectsGallery from '~/components/projects/gallery.vue'
+// import Projects from '~/components/core/projects.vue'
 
 export default {
     components: {
         Hero,
-        Projects
+        ProjectsGallery
+        // Projects
     },
     data() {
         return {

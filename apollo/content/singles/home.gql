@@ -12,6 +12,22 @@ query Entry($siteId: [QueryArgument]) {
           backgroundColour
         }
       }
+      projectsGallery {
+        ... on projectsGallery_project_BlockType {
+          id
+          entries {
+            ... on projects_projects_Entry {
+              id
+              title
+              imageAsset {
+                url
+                title
+              }
+            }
+          }
+          dualVariation
+        }
+      }
       projects {
         ... on projects_projects_Entry {
           id
