@@ -1,0 +1,40 @@
+query Entry($siteId: [QueryArgument]) {
+  entry(section: "work", siteId: $siteId) {
+    id
+    ... on work_work_Entry {
+      id
+      hero {
+        ... on hero_BlockType {
+          id
+          heading
+          subheading
+          backgroundText
+          backgroundColour
+        }
+      }
+      projectsGallery {
+        ... on projectsGallery_project_BlockType {
+          id
+          entries {
+            ... on projects_projects_Entry {
+              id
+              title
+              imageAsset {
+                url
+                title
+              }
+            }
+          }
+          dualVariation
+        }
+      }
+      projects {
+        ... on projects_projects_Entry {
+          id
+          title
+          private
+        }
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@
             <div class="gallery-tile__image lg:absolute lg:top-0 lg:left-0 w-full h-full">
                 <v-img :src="tile.imageAsset[0].url" :alt="tile.imageAsset[0].title" img-class="w-full h-full object-cover" />
             </div>
-            <div class="gallery-tile__heading hidden lg:flex relative bg-brand-navy w-full h-32 px-8 items-center">
+            <div class="gallery-tile__heading hidden lg:flex relative bg-brand-navy w-full h-20 px-8 items-center">
                 <span class="text-brand-white font-body uppercase text-5xl">{{ tile.title }}</span>
             </div>
         </div>
@@ -52,7 +52,7 @@ export default {
                         transform: translateY(0);
                     }
                     &__image {
-                        transform: scale(1.2);
+                        transform: scale(1.1);
                     }
                 }
             }

@@ -1,4 +1,4 @@
-query Entry($siteId: [QueryArgument]) {
+query HomeQuery($siteId: [QueryArgument]) {
   entry(section: "home", siteId: $siteId) {
     id
     ... on home_home_Entry {
@@ -12,27 +12,49 @@ query Entry($siteId: [QueryArgument]) {
           backgroundColour
         }
       }
-      projectsGallery {
-        ... on projectsGallery_project_BlockType {
+      pageBuilder {
+        ... on pageBuilder_contentSimple_BlockType {
           id
-          entries {
-            ... on projects_projects_Entry {
+          typeHandle
+          body
+        }
+        ... on pageBuilder_list_BlockType {
+          id
+          typeHandle
+          heading
+          listItem {
+            ... on listItem_BlockType {
+              id
+              heading
+              body
+            }
+          }
+          backgroundColour
+        }
+        ... on pageBuilder_experience_BlockType {
+          id
+          typeHandle
+          blockType
+          heading
+          positions {
+            ... on experience_experience_Entry {
               id
               title
-              imageAsset {
-                url
-                title
+              experience {
+                ... on experience_BlockType {
+                  id
+                  position
+                  location
+                  description
+                }
               }
             }
           }
-          dualVariation
         }
-      }
-      projects {
-        ... on projects_projects_Entry {
+        ... on pageBuilder_contact_BlockType {
           id
-          title
-          private
+          typeHandle
+          heading
         }
       }
     }

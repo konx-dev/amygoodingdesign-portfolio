@@ -6,35 +6,43 @@
             <span class="lg:hidden">{{ entry.hero[0].backgroundText }}</span>
             <span class="lg:hidden">{{ entry.hero[0].backgroundText }}</span>
         </div>
-        <PageBuilder :blocks="entry.pageBuilder" />
+        <!-- <Projects :content="entry.projects" /> -->
+        <div class="bg-brand-navy py-16">
+            <ProjectsGallery :content="entry.projectsGallery" />
+        </div>
     </div>
 </template>
 
 <script>
-import HomeEntry from '~/apollo/content/singles/home'
+import WorkEntry from '~/apollo/content/singles/work'
 
-import PageBuilder from '~/components/builders/page-builder/PageBuilder.vue'
 import Hero from '~/components/core/hero.vue'
+import ProjectsGallery from '~/components/projects/gallery.vue'
+// import Projects from '~/components/core/projects.vue'
 
 export default {
     components: {
-        PageBuilder,
-        Hero
+        Hero,
+        ProjectsGallery
+        // Projects
     },
     data() {
         return {
             entry: null
         }
     },
+    computed: {
+        navigation() {
+            return this.$store.state.general.navigation
+        }
+    },
     apollo: {
         entry: {
             prefetch: true,
             manual: true,
-            query: HomeEntry,
+            query: WorkEntry,
             variables() {
-                const url = this.$route.path.replace(/^\/+/g, '')
                 return {
-                    uri: url,
                     siteId: process.env.SITE_ID
                 }
             },

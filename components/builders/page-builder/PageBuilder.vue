@@ -5,11 +5,17 @@
 </template>
 <script>
 // Component Imports here
-import ExampleA from '~/components/builders/page-builder/components/ExampleA.vue'
+import ContentSimple from '~/components/builders/page-builder/components/ContentSimple.vue'
+import List from '~/components/builders/page-builder/components/List.vue'
+import Experience from '~/components/builders/page-builder/components/Experience.vue'
+import Contact from '~/components/builders/page-builder/components/Contact.vue'
 
 export default {
     components: {
-        ExampleA
+        ContentSimple,
+        List,
+        Experience,
+        Contact
     },
     props: {
         blocks: {
