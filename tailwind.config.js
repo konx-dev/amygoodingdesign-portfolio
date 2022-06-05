@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     fontFamily: {
       'heading': ['Hey August','sans-serif'],
-      'body': ['Anton Regular','sans-serif']
+      'anton': ['Anton Regular','sans-serif'],
+      'body': ['Raleway','sans-serif']
     },
     colors: {
       brand: {
@@ -16,7 +17,13 @@ module.exports = {
         navy: '#193c4b'
       }
     },
-    extend: {},
+    
+    extend: {
+      maxWidth: {
+        '300': '300px',
+        '220': '220px'
+      },
+    },
   },
   variants: {
     extend: {},

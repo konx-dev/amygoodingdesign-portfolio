@@ -4,7 +4,7 @@
             <h1 class="visually-hidden">{{ content.heading }}, {{ content.subheading }}</h1>
             <div class="flex hero__inner flex-col justify-center lg:justify-end lg:pb-20 px-6 md:px-0">
                 <div class="hero__heading z-20 text-brand-pink font-heading uppercase">{{ content.heading }}</div>
-                <div class="hero__subheading z-10 pl-2 md:pl-8 text-brand-black font-body uppercase">{{ content.subheading }}</div>
+                <div class="hero__subheading z-10 pl-2 md:pl-8 text-brand-black font-anton uppercase">{{ content.subheading }}</div>
             </div>
         </div>
         <!-- <div class="hero__overlay absolute font-heading uppercase text-brand-blue">

@@ -51,3 +51,7 @@ input, input:before, input:after {
 .noscroll {
   overflow: hidden;
 }
+
+.text-slant {
+    transform: rotate(-3deg);
+}

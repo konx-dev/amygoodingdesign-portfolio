@@ -8,7 +8,7 @@
                 <span>x</span>
             </div>
             <div class="navigation__items">
-                <router-go v-for="(link,index) in navigation" :key="index" :to="link.linkField.url" class="font-body mx-2 text-brand-white uppercase">
+                <router-go v-for="(link,index) in navigation" :key="index" :to="link.linkField.url" class="font-anton mx-2 text-brand-white uppercase">
                     {{ link.linkField.customText }}
                 </router-go>
             </div>
