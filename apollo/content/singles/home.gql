@@ -22,6 +22,7 @@ query HomeQuery($siteId: [QueryArgument]) {
           id
           typeHandle
           heading
+          backgroundColour
           listItem {
             ... on listItem_BlockType {
               id
