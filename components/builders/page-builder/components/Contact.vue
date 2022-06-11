@@ -1,6 +1,6 @@
 <template>
     <div>
-        Example A
+        Contact Block
     </div>
 </template>
 <script>

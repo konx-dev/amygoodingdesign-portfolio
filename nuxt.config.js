@@ -90,6 +90,7 @@ export default {
   fontawesome: {
     icons: {
       brands: ['faTwitter','faInstagram','faFacebook','faYoutube'],
+      solid: ['faCaretDown']
     }
   },
   
