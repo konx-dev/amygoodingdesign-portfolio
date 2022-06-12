@@ -41,7 +41,7 @@ export default {
   plugins: [
     '~/plugins/global',
     '~/plugins/is-external',
-    { src: '~/plugins/axe.js', mode: 'client' }
+    // { src: '~/plugins/axe.js', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
