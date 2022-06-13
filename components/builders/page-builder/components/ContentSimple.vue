@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-auto text-center my-5 md:my-10 lg:my-20 lg:max-w-5xl container px-4 lg:px-0">
+    <div class="mx-auto text-center my-10 lg:my-20 lg:max-w-5xl container px-4 lg:px-0">
         <div class="content-simple__body" v-html="block.body" />
     </div>
 </template>
